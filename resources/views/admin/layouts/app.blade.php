@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Admin Panel</title>
+    
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -23,6 +24,7 @@
                 <li><a href="/admin/services" class="hover:text-yellow-400">Services</a></li>
                 <li><a href="/admin/products" class="hover:text-yellow-400">Products</a></li>
                 <li><a href="/admin/messages" class="hover:text-yellow-400">Messages</a></li>
+                <li><a href="/admin/seo" class="hover:text-yellow-400">SEO Settings</a></li>
             </ul>
         </div>
 

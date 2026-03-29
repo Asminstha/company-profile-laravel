@@ -5,8 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+{{--  SEO Meta Tags --}}
+    @php
+        $routeName = Route::currentRouteName() ?? 'home';
+        $seo = \App\Models\SeoSetting::where('page', $routeName)->first();
+    @endphp
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $seo->meta_title ?? 'My Website' }}</title>
+    <meta name="description" content="{{ $seo->meta_description ?? 'Default description' }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,8 +25,8 @@
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
 
-  {{-- Navbar --}}
-    @include('components.navbar')
+        {{-- Navbar --}}
+        @include('components.navbar')
         <!-- Page Content -->
         <main>
             @yield('content')
@@ -28,6 +34,9 @@
         {{-- Footer --}}
         @include('components.footer')
     </div>
+
+    {{-- carousel  --}}
+    @stack('scripts')
 </body>
 
 </html>

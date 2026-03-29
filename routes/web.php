@@ -7,19 +7,20 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\SeoController;
 
 
 
 // FRONTEND ROUTES
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about', function () {
     return view('frontend.home');
-});
+})->name('about');
 
 Route::get('/services', function () {
     return view('frontend.home');
-});
+})->name('services');
 
 // Route::get('/contact', function () {
 //     return view('frontend.home');
@@ -63,6 +64,11 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');
 Route::delete('/admin/messages/{message}', [MessageController::class, 'destroy'])->name('admin.messages.destroy');
 
+
+// SEO routes
+
+Route::get('/admin/seo', [SeoController::class, 'index'])->name('admin.seo');
+Route::post('/admin/seo', [SeoController::class, 'update'])->name('admin.seo.update');
 });
 
 require __DIR__.'/auth.php';
