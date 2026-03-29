@@ -20,9 +20,9 @@
 
             <ul class="space-y-4">
                 <li><a href="/dashboard" class="hover:text-yellow-400">Dashboard</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Services</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Products</a></li>
-                <li><a href="#" class="hover:text-yellow-400">Messages</a></li>
+                <li><a href="/admin/services" class="hover:text-yellow-400">Services</a></li>
+                <li><a href="/admin/products" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="/admin/messages" class="hover:text-yellow-400">Messages</a></li>
             </ul>
         </div>
 

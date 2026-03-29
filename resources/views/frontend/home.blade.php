@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Str; @endphp
 @extends('layouts.app')
 
 @section('title', 'Home')
@@ -83,47 +84,58 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <section class="py-20 bg-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
 
-            <p class="text-blue-600 uppercase tracking-wide">Our Services</p>
-            <h2 class="text-3xl font-bold mt-2 mb-10">
-                Comprehensive Solutions to Drive Sustainable Development
-            </h2>
+            <!-- Section Title -->
+            <div class="text-center mb-14">
+                <h2 class="text-4xl font-bold text-gray-800">
+                    Our Services
+                </h2>
+                <p class="text-gray-500 mt-3">
+                    We provide high quality digital solutions to grow your business
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-8">
+            <!-- Grid -->
+            <div class="grid md:grid-cols-3 gap-10">
 
-                <!-- Service Card -->
-                <div
-                    class="bg-blue-800 text-white p-10 rounded-xl shadow hover:scale-105 transition duration-300 flex items-center justify-center font-medium">
-                    Software Development
-                </div>
-                <div
-                    class="bg-blue-800 text-white p-10 rounded-xl shadow hover:scale-105 transition duration-300 flex items-center justify-center font-medium">
-                    {{-- <div class="bg-blue-800 text-white p-8 rounded-xl shadow hover:scale-105 transition"> --}}
-                    Cloud Computing Solutions
-                </div>
+                @foreach ($services as $service)
+                    <div
+                        class="group bg-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
 
-                <div class="bg-blue-800 text-white p-8 rounded-xl shadow hover:scale-105 transition">
-                    Website Development
-                </div>
+                        <!-- Image -->
+                        <div class="overflow-hidden">
+                            <img src="{{ asset('uploads/services/' . $service->image) }}"
+                                class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500">
+                        </div>
 
-                <div class="bg-blue-800 text-white p-8 rounded-xl shadow hover:scale-105 transition">
-                    IT Consulting
-                </div>
+                        <!-- Content -->
+                        <div class="p-6">
 
-                <div class="bg-blue-800 text-white p-8 rounded-xl shadow hover:scale-105 transition">
-                    Managed IT Services
-                </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition">
+                                {{ $service->title }}
+                            </h3>
 
-                <div class="bg-blue-800 text-white p-8 rounded-xl shadow hover:scale-105 transition">
-                    Data Analytics
-                </div>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                {{ \Illuminate\Support\Str::limit($service->description, 100) }}
+                            </p>
+
+                            <!-- Button -->
+                            <a href="#" class="text-blue-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+
+                        </div>
+                    </div>
+                @endforeach
 
             </div>
 
         </div>
     </section>
+
+
 
     <!-- PRODUCTS SECTION -->
     <section class="py-20">

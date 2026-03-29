@@ -4,11 +4,14 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\MessageController;
+
+
 
 // FRONTEND ROUTES
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', function () {
     return view('frontend.home');
@@ -18,9 +21,19 @@ Route::get('/services', function () {
     return view('frontend.home');
 });
 
+// Route::get('/contact', function () {
+//     return view('frontend.home');
+// });
+
+
 Route::get('/contact', function () {
-    return view('frontend.home');
-});
+    return view('frontend.contact');
+})->name('contact');
+
+
+Route::post('/contact-submit', [ContactController::class, 'store'])
+    ->name('contact.submit');
+
 
 // REDIRECT DEFAULT DASHBOARD TO ADMIN
 Route::get('/dashboard', function () {
@@ -46,7 +59,9 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/admin/services/{service}', [ServiceController::class, 'update'])->name('admin.services.update');
     Route::delete('/admin/services/{service}', [ServiceController::class, 'destroy'])->name('admin.services.destroy');
 
-
+//   contact message routes
+Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');
+Route::delete('/admin/messages/{message}', [MessageController::class, 'destroy'])->name('admin.messages.destroy');
 
 });
 
