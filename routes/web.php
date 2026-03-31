@@ -8,18 +8,21 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\AboutController;
 
 
 
 // FRONTEND ROUTES
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/about', function () {
-    return view('frontend.home');
-})->name('about');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+// Route::get('/about', function () {
+//     return view('frontend.about');
+// })->name('about');
 
 Route::get('/services', function () {
-    return view('frontend.home');
+    return view('frontend.services');
 })->name('services');
 
 // Route::get('/contact', function () {
@@ -69,6 +72,12 @@ Route::delete('/admin/messages/{message}', [MessageController::class, 'destroy']
 
 Route::get('/admin/seo', [SeoController::class, 'index'])->name('admin.seo');
 Route::post('/admin/seo', [SeoController::class, 'update'])->name('admin.seo.update');
+
+// about page routes
+   Route::get('/admin/about', [AboutController::class, 'index'])->name('admin.about');
+
+    Route::post('/admin/about', [AboutController::class, 'update'])->name('admin.about.update');
+
 });
 
 require __DIR__.'/auth.php';
