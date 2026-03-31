@@ -87,44 +87,52 @@
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
 
-            <!-- CARD -->
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
-
-                <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    ⚙️
-                </div>
-
-                <h3 class="text-lg font-semibold mb-2">Our Mission</h3>
-                <p class="text-gray-500 text-sm">To implement cost efficient solutions.</p>
-
-            </div>
-
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
-
-                <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    🎯
-                </div>
-
-                <h3 class="text-lg font-semibold mb-2">Our Vision</h3>
-                <p class="text-gray-500 text-sm">Simplify Information Technology Services.</p>
-
-            </div>
-
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
-
-                <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    🚀
-                </div>
-
-                <h3 class="text-lg font-semibold mb-2">Our Goals</h3>
-                <p class="text-gray-500 text-sm">Simplify IT, reduce costs, innovate.</p>
-
-            </div>
-
+    <!-- MISSION -->
+    <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
+            ⚙️
         </div>
+
+        <h3 class="text-lg font-semibold mb-2">
+            {{ $about->mission_title ?? 'Our Mission' }}
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+            {{ $about->mission_desc ?? 'Default mission description' }}
+        </p>
+    </div>
+
+    <!-- VISION -->
+    <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
+            🎯
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2">
+            {{ $about->vision_title ?? 'Our Vision' }}
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+            {{ $about->vision_desc ?? 'Default vision description' }}
+        </p>
+    </div>
+
+    <!-- GOALS -->
+    <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
+            🚀
+        </div>
+
+        <h3 class="text-lg font-semibold mb-2">
+            {{ $about->goals_title ?? 'Our Goals' }}
+        </h3>
+
+        <p class="text-gray-500 text-sm">
+            {{ $about->goals_desc ?? 'Default goals description' }}
+        </p>
+    </div>
+
+</div>
 
     </section>
 @endsection

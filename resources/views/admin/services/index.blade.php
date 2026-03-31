@@ -19,9 +19,9 @@
                     </tr>
                 </thead>
 
-                <tbody class="divide-y divide-slate-100">
+                <tbody class="divide-y divide-slate-100 ">
                     @foreach ($services as $service)
-                        <tr class="hover:bg-slate-50/50 transition-colors">
+                        <tr class="hover:bg-slate-50/50 transition-colors  ">
 
                             <!-- Image -->
                             <td class="p-4">

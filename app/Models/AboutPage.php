@@ -13,6 +13,15 @@ protected $fillable = [
     'image',
     'experience',
     'projects',
-    'experts'
+    'experts',
+
+//  added later
+    'mission_title',
+    'mission_desc',
+    'vision_title',
+    'vision_desc',
+    'goals_title',
+    'goals_desc'
+
 ];
 }

@@ -41,6 +41,16 @@ class AboutController extends Controller
             'experience' => $request->experience,
             'projects' => $request->projects,
             'experts' => $request->experts,
+
+             'mission_title' => $request->mission_title,
+    'mission_desc' => $request->mission_desc,
+
+    'vision_title' => $request->vision_title,
+    'vision_desc' => $request->vision_desc,
+
+    'goals_title' => $request->goals_title,
+    'goals_desc' => $request->goals_desc,
+    
             'image' => $imageName,
         ];
 

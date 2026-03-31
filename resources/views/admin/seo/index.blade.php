@@ -22,7 +22,7 @@
                 name="pages[{{ $page }}][meta_title]"
                 value="{{ $seo[$page]->meta_title ?? '' }}"
                 placeholder="Meta Title"
-                class="w-full border p-3 rounded mb-3">
+                class="w-full border p-3 mb-2  rounded ">
 
             <textarea
                 name="pages[{{ $page }}][meta_description]"
