@@ -3,13 +3,13 @@
 @section('content')
 
     <!-- 🔵 HERO / BREADCRUMB -->
-    <section class="bg-blue-900 text-white py-16">
+    <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div class="max-w-6xl mx-auto px-6 text-center">
 
             <h1 class="text-3xl font-bold mb-4">Contact Us</h1>
 
             <div class="inline-flex items-center space-x-2 bg-blue-800 px-4 py-2 rounded-full text-sm">
-                <span>Home</span>
+                <span><a href="{{ route('home') }}" class="text-white hover:text-blue-300">Home</a></span>
                 <span>›</span>
                 <span>Contact Us </span>
             </div>

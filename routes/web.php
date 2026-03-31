@@ -17,13 +17,14 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 
+Route::get('/services', [HomeController::class, 'services'])->name('services');
 // Route::get('/about', function () {
 //     return view('frontend.about');
 // })->name('about');
 
-Route::get('/services', function () {
-    return view('frontend.services');
-})->name('services');
+// Route::get('/services', function () {
+//     return view('frontend.services');
+// })->name('services');
 
 // Route::get('/contact', function () {
 //     return view('frontend.home');

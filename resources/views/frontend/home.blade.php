@@ -3,24 +3,7 @@
 
 @section('title', 'Home')
 
-<!-- Corrected Swiper CSS -->
-<!-- Corrected Swiper CSS -->
-{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net" /> --}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<style>
-    .heroSwiper {
-        width: 100%;
-        /* height: 80vh; */
-    }
-    .swiper-pagination-bullet {
-        background: white !important;
-        opacity: 0.5;
-    }
-    .swiper-pagination-bullet-active {
-        background: #facc15 !important; /* Yellow */
-        opacity: 1;
-    }
-</style>
 
 
 @section('content')

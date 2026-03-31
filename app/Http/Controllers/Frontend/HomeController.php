@@ -23,4 +23,13 @@ class HomeController extends Controller
         $about = AboutPage::first();
         return view('frontend.about', compact('about'));
     }
+
+    public function services()
+    {
+        $services = Service::latest()->get();
+        return view('frontend.services', compact('services'));
+    }
+
+
+
 }
