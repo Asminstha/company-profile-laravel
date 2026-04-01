@@ -3,7 +3,16 @@
 
         <!-- Left -->
         <div>
-            <h2 class="font-bold text-lg mb-4">DevCatalyst</h2>
+            <a href="/" class="flex items-center gap-10 group">
+
+                <img src="{{ asset('assets/img/logo.png') }}" alt="DECAT Logo"
+                    class="h-12 w-12  scale-125 object-contain transition-transform duration-300 group-hover:scale-150">
+                <div class="leading-tight scale-125">
+                    <div class="text-white font-bold text-sm tracking-wide">Development Catalyst</div>
+                    <div class="text-white/80 text-xs tracking-wider">Consultancy Pvt. Ltd.</div>
+                </div>
+            </a>
+            <br>
 
             <p class="text-sm mb-2">📍 Nagarjun-05, Kathmandu, Nepal</p>
             <p class="text-sm mb-2">📧 info@devcatalyst.com.np</p>

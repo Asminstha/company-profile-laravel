@@ -79,6 +79,9 @@ Route::post('/admin/seo', [SeoController::class, 'update'])->name('admin.seo.upd
 
     Route::post('/admin/about', [AboutController::class, 'update'])->name('admin.about.update');
 
+
+
+    Route::get('/services/{id}', [HomeController::class, 'serviceDetail']);
 });
 
 require __DIR__.'/auth.php';

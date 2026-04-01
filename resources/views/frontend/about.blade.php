@@ -14,7 +14,7 @@
 
     <!-- ABOUT SECTION -->
     <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 
             <!-- LEFT -->
             <div>
@@ -52,22 +52,23 @@
             </div>
 
             <!-- RIGHT IMAGE -->
-            <div class="relative">
+            <div class="relative max-w-md mx-auto">
                 @if (!empty($about) && $about->image)
                     <img src="{{ asset('uploads/about/' . $about->image) }}"
                         class="rounded-xl shadow-lg w-full object-cover" alt="{{ $about->heading ?? 'About Us' }}">
                 @else
                     <!-- Fallback image if no record exists -->
-                    <img src="{{ asset('assets/img/tech.png') }}" class="rounded-xl shadow-lg w-full object-cover"
+                    <img src="{{ asset('assets/img/about.jpg') }}" class="rounded-xl shadow-lg w-full object-cover"
                         alt="Default About">
                 @endif
 
                 <!-- EXPERIENCE BADGE -->
-                <div class="absolute -top-12 -right-15 bg-white rounded-full shadow-lg p-6 text-center">
+                <div
+                    class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/4 bg-white rounded-full border-4 border-blue-50 shadow-2xl p-10 w-40 h-40 flex flex-col items-center justify-center text-center">
                     <h3 class="text-2xl font-bold text-blue-700">
                         {{ $about->experience ?? '15+' }}
                     </h3>
-                    <p class="text-xs text-gray-600">YEARS OF EXPERIENCE</p>
+                    <p class="text-xs text-gray-600">YEARS OF <br> EXPERIENCE</p>
                 </div>
             </div>
 

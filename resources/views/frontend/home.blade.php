@@ -49,7 +49,7 @@
                     </button>
                 </div>
                 <div class="flex justify-center">
-                    <img src="{{ asset('assets/img/hero.png') }}" class="w-full max-w-md rounded-2xl " alt="Hero 2">
+                    <img src="{{ asset('assets/img/tech.png') }}" class="w-full max-w-md rounded-2xl " alt="Hero 2">
                 </div>
             </div>
         </div>

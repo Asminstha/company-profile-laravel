@@ -24,12 +24,19 @@ class HomeController extends Controller
         return view('frontend.about', compact('about'));
     }
 
-    public function services()
-    {
-        $services = Service::latest()->get();
-        return view('frontend.services', compact('services'));
-    }
 
+public function services()
+{
+    $services = Service::all();
+    $firstService = $services->first();
 
+    return view('frontend.services', compact('services', 'firstService'));
+}
+
+public function serviceDetail($id)
+{
+    $service = Service::findOrFail($id);
+    return response()->json($service);
+}
 
 }

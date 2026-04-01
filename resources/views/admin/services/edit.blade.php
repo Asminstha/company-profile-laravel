@@ -57,6 +57,26 @@
                 @enderror
             </div>
 
+            <!-- Features -->
+<div>
+    <label class="block text-sm font-semibold text-slate-700 mb-2">Features</label>
+    <textarea name="features" rows="3"
+        class="w-full px-4 py-2 border rounded-lg">{{ old('features', $service->features) }}</textarea>
+</div>
+
+<!-- Impact -->
+<div>
+    <label class="block text-sm font-semibold text-slate-700 mb-2">Impact</label>
+    <textarea name="impact" rows="3"
+        class="w-full px-4 py-2 border rounded-lg">{{ old('impact', $service->impact) }}</textarea>
+</div>
+
+<!-- Audience -->
+<div>
+    <label class="block text-sm font-semibold text-slate-700 mb-2">Target Audience</label>
+    <textarea name="audience" rows="3"
+        class="w-full px-4 py-2 border rounded-lg">{{ old('audience', $service->audience) }}</textarea>
+</div>
             <!-- Submit Button -->
             <div class="pt-4">
     <button type="submit"

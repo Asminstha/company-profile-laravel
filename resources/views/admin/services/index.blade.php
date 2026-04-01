@@ -15,6 +15,9 @@
                         <th class="p-4 text-sm font-semibold text-slate-700 w-24">Image</th>
                         <th class="p-4 text-sm font-semibold text-slate-700 min-w-[150px]">Title</th>
                         <th class="p-4 text-sm font-semibold text-slate-700 min-w-[300px]">Description</th>
+                        <th class="p-4 text-sm font-semibold text-slate-700 min-w-[200px]">Features</th>
+                        <th class="p-4 text-sm font-semibold text-slate-700 min-w-[200px]">Impact</th>
+                        <th class="p-4 text-sm font-semibold text-slate-700 min-w-[200px]">Target Audience</th>
                         <th class="p-4 text-sm font-semibold text-slate-700 text-center">Action</th>
                     </tr>
                 </thead>
@@ -43,12 +46,35 @@
                                 </div>
                             </td>
 
-
                             <!-- Description: Scrollable inside the cell -->
                             <td class="p-4">
                                 <div
                                     class="text-sm text-slate-600 max-h-20 overflow-y-auto custom-scrollbar pr-2 leading-relaxed min-w-[250px]">
                                     {{ $service->description }}
+                                </div>
+                            </td>
+
+                            <!-- Features: Scrollable inside the cell -->
+                            <td class="p-4">
+                                <div
+                                    class="text-sm text-slate-600 max-h-20 overflow-y-auto custom-scrollbar pr-2 leading-relaxed min-w-[180px]">
+                                    {{ $service->features ?? '—' }}
+                                </div>
+                            </td>
+
+                            <!-- Impact: Scrollable inside the cell -->
+                            <td class="p-4">
+                                <div
+                                    class="text-sm text-slate-600 max-h-20 overflow-y-auto custom-scrollbar pr-2 leading-relaxed min-w-[180px]">
+                                    {{ $service->impact ?? '—' }}
+                                </div>
+                            </td>
+
+                            <!-- Target Audience: Scrollable inside the cell -->
+                            <td class="p-4">
+                                <div
+                                    class="text-sm text-slate-600 max-h-20 overflow-y-auto custom-scrollbar pr-2 leading-relaxed min-w-[180px]">
+                                    {{ $service->audience ?? '—' }}
                                 </div>
                             </td>
 
