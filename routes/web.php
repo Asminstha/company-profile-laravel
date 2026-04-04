@@ -18,17 +18,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
-// Route::get('/about', function () {
-//     return view('frontend.about');
-// })->name('about');
 
-// Route::get('/services', function () {
-//     return view('frontend.services');
-// })->name('services');
-
-// Route::get('/contact', function () {
-//     return view('frontend.home');
-// });
 
 
 Route::get('/contact', function () {
@@ -79,9 +69,12 @@ Route::post('/admin/seo', [SeoController::class, 'update'])->name('admin.seo.upd
 
     Route::post('/admin/about', [AboutController::class, 'update'])->name('admin.about.update');
 
-
-
+// service detail route for frontend
     Route::get('/services/{id}', [HomeController::class, 'serviceDetail']);
+
+
+
+
 });
 
 require __DIR__.'/auth.php';

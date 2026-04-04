@@ -26,7 +26,7 @@
                     {{ $about->heading ?? 'We strive to be a better technology partner.' }}
                 </h2>
 
-                <p class="text-gray-600 leading-relaxed mb-6">
+                <p class="text-gray-600 leading-relaxed mb-6 text-justify">
                     {{ $about->description ?? 'Company description here...' }}
                 </p>
 
@@ -64,15 +64,26 @@
 
                 <!-- EXPERIENCE BADGE -->
                 <div
-                    class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/4 bg-white rounded-full border-4 border-blue-50 shadow-2xl p-10 w-40 h-40 flex flex-col items-center justify-center text-center">
-                    <h3 class="text-2xl font-bold text-blue-700">
+                    class="absolute
+           top-2 right-2
+           sm:top-0 sm:right-0
+           translate-x-0 translate-y-0
+           sm:translate-x-1/3 sm:-translate-y-1/4
+           bg-white rounded-full border-4 border-blue-50 shadow-2xl
+           p-4 sm:p-6 md:p-8
+           w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
+           flex flex-col items-center justify-center text-center">
+
+                    <h3 class="text-sm sm:text-lg md:text-2xl font-bold text-blue-700">
                         {{ $about->experience ?? '15+' }}
                     </h3>
-                    <p class="text-xs text-gray-600">YEARS OF <br> EXPERIENCE</p>
-                </div>
-            </div>
 
-        </div>
+                    <p class="text-[8px] sm:text-xs text-gray-600 leading-tight">
+                        YEARS OF <br> EXPERIENCE
+                    </p>
+                </div>
+
+            </div>
     </section>
 
     <!-- FEATURES -->
@@ -86,53 +97,57 @@
             Where Your Vision Meets Our Expertise: Crafting Tailored Software for Every Challenge.
         </p>
 
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
 
             <!-- MISSION -->
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+            <div
+                class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    ⚙️
+                    class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
+                    <span class="group-hover:animate-bounce">⚙️</span>
                 </div>
 
-                <h3 class="text-lg font-semibold mb-2">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">
                     {{ $about->mission_title ?? 'Our Mission' }}
                 </h3>
 
-                <p class="text-gray-500 text-sm">
-                    {{ $about->mission_desc ?? 'Default mission description' }}
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    {{ $about->mission_desc ?? 'To empower businesses through innovative technology and strategic consulting.' }}
                 </p>
             </div>
 
             <!-- VISION -->
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+            <div
+                class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    🎯
+                    class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
+                    <span class="group-hover:animate-bounce">🎯</span>
                 </div>
 
-                <h3 class="text-lg font-semibold mb-2">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">
                     {{ $about->vision_title ?? 'Our Vision' }}
                 </h3>
 
-                <p class="text-gray-500 text-sm">
-                    {{ $about->vision_desc ?? 'Default vision description' }}
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    {{ $about->vision_desc ?? 'To be the global leader in digital transformation and organizational excellence.' }}
                 </p>
             </div>
 
             <!-- GOALS -->
-            <div class="border border-dashed border-blue-300 p-8 rounded-xl hover:shadow-lg transition">
+            <div
+                class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
-                    class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full border border-dashed border-blue-400">
-                    🚀
+                    class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
+                    <span class="group-hover:animate-bounce">🚀</span>
                 </div>
 
-                <h3 class="text-lg font-semibold mb-2">
+                <h3 class="text-xl font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">
                     {{ $about->goals_title ?? 'Our Goals' }}
                 </h3>
 
-                <p class="text-gray-500 text-sm">
-                    {{ $about->goals_desc ?? 'Default goals description' }}
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    {{ $about->goals_desc ?? 'Achieving sustainable growth while delivering measurable value to our stakeholders.' }}
                 </p>
             </div>
 

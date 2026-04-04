@@ -15,15 +15,15 @@ return new class extends Migration
         $table->longText('features')->nullable();
         $table->longText('impact')->nullable();
         $table->longText('audience')->nullable();
-        $table->string('icon')->nullable();
         $table->string('image')->nullable();
+        
     });
 }
 
 public function down()
 {
     Schema::table('services', function (Blueprint $table) {
-        $table->dropColumn(['features','impact','audience','icon','image']);
+        $table->dropColumn(['features','impact','audience','image']);
     });
 }
 };
