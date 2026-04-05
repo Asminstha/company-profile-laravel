@@ -19,10 +19,10 @@
 
     <!-- ⚪ CONTACT SECTION -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
             <!-- LEFT SIDE -->
-            <div class="space-y-6">
+            <div data-aos="fade-up" class="space-y-6">
 
                 <!-- Phone -->
                 <div class="bg-white p-5 rounded-xl shadow flex items-start space-x-4">
@@ -44,7 +44,7 @@
 
                 <!-- Address -->
                 <div class="bg-white p-5 rounded-xl shadow flex items-start space-x-4">
-                    <div class="text-blue-600 text-xl">📍</div>
+                    <div class="text-blue-600 text-xl">➤</div>
                     <div>
                         <h4 class="font-semibold text-gray-700">Office Address</h4>
                         <p class="text-gray-500 text-sm">Nagarjun-05, Kathmandu, Nepal</p>
@@ -54,7 +54,7 @@
             </div>
 
             <!-- RIGHT SIDE FORM -->
-            <div class="md:col-span-2 bg-white p-8 rounded-xl shadow">
+            <div data-aos="fade-up" class="md:col-span-2 bg-white p-8 rounded-xl shadow">
 
                 <!-- Success -->
                 @if (session('success'))
@@ -131,7 +131,7 @@
 
         <!-- 🗺️ MAP SECTION -->
     <section class="pb-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
+        <div data-aos="fade-up" class="max-w-7xl mx-auto px-6">
             <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg border-4 border-white">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.924591127006!2d85.32951859659794!3d27.694703218571817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199a06c2eaf9%3A0xc5670a9173e161de!2sNew%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1775242751262!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

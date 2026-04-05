@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo.png') }}">
     <title>@yield('title', 'Admin Panel')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-50 font-sans antialiased overflow-hidden"> <!-- Prevent body scroll -->
+<body class="bg-gray-50 font-sans antialiased overflow-hidden">
 
-<div class="flex h-screen overflow-hidden relative"> <!-- h-screen ensures a fixed viewport height -->
-
+<div class="flex h-screen overflow-hidden relative">
     <!-- MOBILE OVERLAY -->
     <div id="sidebar-overlay" onclick="toggleSidebar()"
         class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-30 hidden md:hidden transition-all duration-300">

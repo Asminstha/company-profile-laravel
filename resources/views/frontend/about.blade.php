@@ -14,7 +14,7 @@
 
     <!-- ABOUT SECTION -->
     <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="zoom-in" class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 
             <!-- LEFT -->
             <div>
@@ -33,18 +33,15 @@
                 <!-- STATS -->
                 <div class="flex gap-10 mt-6">
 
-                    <div>
-                        <h3 class="text-2xl font-bold">{{ $about->experience ?? '14+' }}</h3>
+                    <div <h3 class="text-2xl font-bold">{{ $about->experience ?? '14+' }}</h3>
                         <p class="text-gray-500 text-sm">years completed</p>
                     </div>
 
-                    <div>
-                        <h3 class="text-2xl font-bold">{{ $about->projects ?? '50+' }}</h3>
+                    <div <h3 class="text-2xl font-bold">{{ $about->projects ?? '50+' }}</h3>
                         <p class="text-gray-500 text-sm">Project Completed</p>
                     </div>
 
-                    <div>
-                        <h3 class="text-2xl font-bold">{{ $about->experts ?? '60+' }}</h3>
+                    <div <h3 class="text-2xl font-bold">{{ $about->experts ?? '60+' }}</h3>
                         <p class="text-gray-500 text-sm">Skilled Experts</p>
                     </div>
 
@@ -89,19 +86,19 @@
     <!-- FEATURES -->
     <section class="py-16 bg-gray-50 text-center">
 
-        <h2 class="text-2xl font-semibold mb-2">
+        <h2 class="text-3xl font-semibold mb-2 p-2">
             What makes us the preferred choice compared to other companies?
         </h2>
 
-        <p class="text-gray-500 mb-10">
+        <p class="text-gray-500 mb-10 p-2">
             Where Your Vision Meets Our Expertise: Crafting Tailored Software for Every Challenge.
         </p>
 
 
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
 
             <!-- MISSION -->
-            <div
+            <div data-aos="zoom-in"
                 class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
                     class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
@@ -118,7 +115,7 @@
             </div>
 
             <!-- VISION -->
-            <div
+            <div data-aos="zoom-in"
                 class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
                     class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
@@ -135,7 +132,7 @@
             </div>
 
             <!-- GOALS -->
-            <div
+            <div data-aos="zoom-in"
                 class="group relative bg-white border border-dashed border-blue-200 p-8 rounded-2xl hover:border-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col h-full">
                 <div
                     class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border-2 border-dashed border-blue-400 bg-blue-50 text-2xl transition-all duration-300 group-hover:bg-blue-600 group-hover:border-solid group-hover:scale-110">
@@ -156,7 +153,7 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="py-16 bg-gray-50 text-center">
+    <section data-aos="zoom-in" class="py-16 bg-gray-50 text-center">
         <h2 class="text-2xl font-semibold mb-2">Get in Touch with Us</h2>
 
         <p class="text-gray-500 mb-6">

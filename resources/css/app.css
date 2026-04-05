@@ -14,7 +14,56 @@
         opacity: 1;
     }
 
-   
+
+h1{
+    font-family: fangsong;
+}
+/* ===== Navbar ===== */
+.navbar-main {
+    background: transparent;
+}
+
+.navbar-main.scrolled {
+    background: #1a2b6df7;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Active nav link underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: #f59e0b;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger open state */
+.hamburger-open .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.hamburger-open .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    width: 24px;
+}
+
+
 /* ===== WhatsApp Float Button (Bottom Left) ===== */
 .whatsapp-float {
     position: fixed;
@@ -116,47 +165,38 @@
 }
 
 
-/* ===== Navbar ===== */
-.navbar-main {
-    background: transparent;
-}
 
-.navbar-main.scrolled {
-    background: #1a2b6df7;
+/* ===== Responsive Adjustments for Mobile ===== */
+@media (max-width: 800px) {
+    .whatsapp-float {
+        bottom: 20px;
+        left: 15px;
+        gap: 5px;
+    }
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-}
+    .whatsapp-float .wa-btn {
+        width: 42px;
+        height: 42px;
+    }
 
-/* Active nav link underline */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 16px;
-    right: 16px;
-    height: 2px;
-    background: #f59e0b;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transition: transform 0.25s ease;
-}
+    .whatsapp-float .wa-btn svg {
+        width: 22px;
+        height: 22px;
+    }
 
-.nav-link:hover::after,
-.nav-link-active::after {
-    transform: scaleX(1);
-}
+    .whatsapp-float .wa-label {
+        display: none;
+    }
 
-/* Hamburger open state */
-.hamburger-open .hamburger-line:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.hamburger-open .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-}
-.hamburger-open .hamburger-line:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    width: 24px;
+    .go-top-btn {
+        bottom: 20px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .go-top-btn svg {
+        width: 18px;
+        height: 18px;
+    }
 }

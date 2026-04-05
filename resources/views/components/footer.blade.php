@@ -14,7 +14,7 @@
             </a>
             <br>
 
-            <p class="text-sm mb-2">📍 Nagarjun-05, Kathmandu, Nepal</p>
+            <p class="text-sm mb-2">➤ Nagarjun-05, Kathmandu, Nepal</p>
             <p class="text-sm mb-2">📧 info@devcatalyst.com.np</p>
             <p class="text-sm mb-2">📞 984912121</p>
             <p class="text-sm">🌐 www.devcatalyst.com.np</p>
@@ -44,7 +44,9 @@
     </div>
 
     <!-- Bottom -->
-    <div class="border-t border-gray-400 mt-10 pt-4 text-center text-sm">
-        © {{ date('Y') }} Development Catalyst Consultancy Pvt. Ltd. All rights reserved.
-    </div>
+  <div class="relative mt-10 pt-4 px-10 text-center text-sm before:content-[''] before:absolute before:top-0 before:left-[10%] before:w-4/5 before:border-t before:border-gray-400">
+    © {{ date('Y') }} Development Catalyst Consultancy Pvt. Ltd. All rights reserved.
+</div>
+
+
 </footer>

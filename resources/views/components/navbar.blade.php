@@ -1,10 +1,10 @@
 
-<nav id="mainNav" class="navbar-main fixed top-0 left-0 w-full z-50 transition-all duration-500">
+<nav id="mainNav" class="navbar-main  fixed top-0 left-0 w-full z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
 
             {{-- Logo --}}
-            <a href="/" class="flex items-center gap-10 group">
+            <a href="{{ route('home') }}" class="flex items-center gap-10 group">
 
                 <img
                     src="{{ asset('assets/img/logo.png') }}"
@@ -18,7 +18,7 @@
             </a>
 
             {{-- Desktop Menu --}}
-            <div class="hidden md:flex items-center gap-1 scale-125">
+            <div class="hidden md:flex items-center gap-2 scale-110">
                 <a href="{{ route('home') }}"
                    class="nav-link px-4 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white transition-all duration-200 relative
                           {{ request()->routeIs('home') ? 'nav-link-active' : '' }}">
